@@ -4,7 +4,13 @@
 >
 > **Terminal Mastery Lab** — Simulador interactivo de terminal Linux/Unix en el navegador para aprender, practicar y dominar la consola desde cero hasta nivel DevOps y SysAdmin. 100% libre y gratuito.
 
-![Terminal Mastery Lab Demo](demo.gif)
+![Terminal Mastery Lab Showcase](preview.png)
+
+<p align="center">
+  <img src="demo.gif" alt="Terminal Basic Commands" width="48%">
+  &nbsp;
+  <img src="demo-advanced.gif" alt="Nano Editor and Advanced Hacking" width="48%">
+</p>
 
 ---
 
