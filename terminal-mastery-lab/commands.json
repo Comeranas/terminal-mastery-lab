@@ -1,0 +1,1500 @@
+[
+    {
+        "name": "alias",
+        "type": "Config",
+        "example": "alias ll='ls -alF'",
+        "desc_es": "Define atajos de teclado para comandos largos.",
+        "desc_en": "Define keyboard shortcuts for long commands."
+    },
+    {
+        "name": "apt",
+        "type": "System",
+        "example": "apt install nginx",
+        "desc_es": "Gestor de paquetes avanzado (Debian/Ubuntu).",
+        "desc_en": "Advanced package manager (Debian/Ubuntu)."
+    },
+    {
+        "name": "apt-get",
+        "type": "System",
+        "example": "apt-get update",
+        "desc_es": "Herramienta clásica de paquetes APT.",
+        "desc_en": "Classic APT package handling utility."
+    },
+    {
+        "name": "at",
+        "type": "System",
+        "example": "at now + 1 hour",
+        "desc_es": "Pone en cola trabajos para ejecutarse más tarde.",
+        "desc_en": "Queues jobs for later execution."
+    },
+    {
+        "name": "awk",
+        "type": "Text",
+        "example": "awk -F':' '{print $1}' /etc/passwd",
+        "desc_es": "Lenguaje de procesamiento de texto y columnas.",
+        "desc_en": "Text and column processing language."
+    },
+    {
+        "name": "base64",
+        "type": "Security",
+        "example": "echo 'hola' | base64",
+        "desc_es": "Codifica o decodifica en base64.",
+        "desc_en": "Encode or decode in base64."
+    },
+    {
+        "name": "basename",
+        "type": "Core",
+        "example": "basename /var/log/syslog",
+        "desc_es": "Extrae el nombre base de una ruta.",
+        "desc_en": "Extract the base name of a path."
+    },
+    {
+        "name": "bc",
+        "type": "Text",
+        "example": "echo 'scale=2; 5/3' | bc",
+        "desc_es": "Calculadora matemática interactiva.",
+        "desc_en": "Interactive math calculator."
+    },
+    {
+        "name": "bg",
+        "type": "Core",
+        "example": "bg %1",
+        "desc_es": "Envía un trabajo a segundo plano (background).",
+        "desc_en": "Send a job to the background."
+    },
+    {
+        "name": "bzip2",
+        "type": "Archive",
+        "example": "bzip2 file.tar",
+        "desc_es": "Compresor de archivos en bloque (más lento/eficiente).",
+        "desc_en": "Block file compressor (slower/efficient)."
+    },
+    {
+        "name": "cal",
+        "type": "System",
+        "example": "cal 2026",
+        "desc_es": "Muestra un calendario.",
+        "desc_en": "Displays a calendar."
+    },
+    {
+        "name": "cat",
+        "type": "Text",
+        "example": "cat /etc/passwd",
+        "desc_es": "Concatena y muestra archivos.",
+        "desc_en": "Concatenate and display files."
+    },
+    {
+        "name": "cd",
+        "type": "Core",
+        "example": "cd /var/log",
+        "desc_es": "Cambia el directorio actual.",
+        "desc_en": "Change the current directory."
+    },
+    {
+        "name": "chgrp",
+        "type": "Security",
+        "example": "chgrp developers repo/",
+        "desc_es": "Cambia el grupo de un archivo.",
+        "desc_en": "Change group ownership."
+    },
+    {
+        "name": "chmod",
+        "type": "Security",
+        "example": "chmod 755 script.sh",
+        "desc_es": "Cambia los permisos de un archivo o directorio.",
+        "desc_en": "Change file or directory permissions."
+    },
+    {
+        "name": "chown",
+        "type": "Security",
+        "example": "chown www-data:www-data html/",
+        "desc_es": "Cambia el propietario o grupo de un archivo.",
+        "desc_en": "Change file owner and group."
+    },
+    {
+        "name": "chroot",
+        "type": "System",
+        "example": "chroot /mnt/sys",
+        "desc_es": "Cambia el directorio raíz.",
+        "desc_en": "Run command or interactive shell with special root directory."
+    },
+    {
+        "name": "clear",
+        "type": "Core",
+        "example": "clear",
+        "desc_es": "Limpia la pantalla de la terminal.",
+        "desc_en": "Clear the terminal screen."
+    },
+    {
+        "name": "cmp",
+        "type": "Text",
+        "example": "cmp bin1 bin2",
+        "desc_es": "Compara dos archivos byte a byte.",
+        "desc_en": "Compare two files byte by byte."
+    },
+    {
+        "name": "cp",
+        "type": "Core",
+        "example": "cp file.txt backup.txt",
+        "desc_es": "Copia archivos y directorios.",
+        "desc_en": "Copy files and directories."
+    },
+    {
+        "name": "crontab",
+        "type": "System",
+        "example": "crontab -e",
+        "desc_es": "Programa comandos para ejecutarse regularmente.",
+        "desc_en": "Schedule periodic background jobs."
+    },
+    {
+        "name": "curl",
+        "type": "Network",
+        "example": "curl -I https://google.com",
+        "desc_es": "Transfiere datos desde o hacia un servidor (HTTP/S, FTP...).",
+        "desc_en": "Transfer data from or to a server."
+    },
+    {
+        "name": "cut",
+        "type": "Text",
+        "example": "cut -d',' -f2 data.csv",
+        "desc_es": "Elimina secciones de cada línea de archivos.",
+        "desc_en": "Remove sections from each line of files."
+    },
+    {
+        "name": "date",
+        "type": "System",
+        "example": "date '+%Y-%m-%d'",
+        "desc_es": "Muestra o establece la fecha y hora.",
+        "desc_en": "Print or set the system date and time."
+    },
+    {
+        "name": "df",
+        "type": "System",
+        "example": "df -h",
+        "desc_es": "Muestra uso de espacio en discos.",
+        "desc_en": "Report file system disk space usage."
+    },
+    {
+        "name": "diff",
+        "type": "Text",
+        "example": "diff old.py new.py",
+        "desc_es": "Compara archivos línea por línea.",
+        "desc_en": "Compare files line by line."
+    },
+    {
+        "name": "dig",
+        "type": "Network",
+        "example": "dig MX google.com",
+        "desc_es": "Utilidad de búsqueda DNS.",
+        "desc_en": "DNS lookup utility."
+    },
+    {
+        "name": "dirname",
+        "type": "Core",
+        "example": "dirname /var/log/syslog",
+        "desc_es": "Extrae el directorio de una ruta.",
+        "desc_en": "Strip last component from file name."
+    },
+    {
+        "name": "dmesg",
+        "type": "System",
+        "example": "dmesg | tail",
+        "desc_es": "Imprime el buffer del anillo del kernel.",
+        "desc_en": "Print or control the kernel ring buffer."
+    },
+    {
+        "name": "dnf",
+        "type": "System",
+        "example": "dnf update",
+        "desc_es": "Gestor de paquetes moderno (Fedora/RHEL).",
+        "desc_en": "Package manager (Fedora/RHEL)."
+    },
+    {
+        "name": "docker",
+        "type": "DevOps",
+        "example": "docker-compose up -d",
+        "desc_es": "Gestión de contenedores.",
+        "desc_en": "Manage containers and images."
+    },
+    {
+        "name": "dpkg",
+        "type": "System",
+        "example": "dpkg -i file.deb",
+        "desc_es": "Gestor de paquetes base de Debian.",
+        "desc_en": "Package manager for Debian."
+    },
+    {
+        "name": "du",
+        "type": "System",
+        "example": "du -sh /var/log",
+        "desc_es": "Estima el espacio usado por archivos/directorios.",
+        "desc_en": "Estimate file space usage."
+    },
+    {
+        "name": "echo",
+        "type": "Core",
+        "example": "echo $PATH",
+        "desc_es": "Muestra una línea de texto.",
+        "desc_en": "Display a line of text."
+    },
+    {
+        "name": "egrep",
+        "type": "Text",
+        "example": "egrep 'error|warn' log",
+        "desc_es": "Igual a grep -E para regex extendidas.",
+        "desc_en": "Print lines that match extended regular expressions."
+    },
+    {
+        "name": "env",
+        "type": "Config",
+        "example": "env",
+        "desc_es": "Muestra el entorno actual.",
+        "desc_en": "Run a program in a modified environment."
+    },
+    {
+        "name": "exit",
+        "type": "Core",
+        "example": "exit",
+        "desc_es": "Cierra la sesión de shell actual.",
+        "desc_en": "Cause the shell to exit."
+    },
+    {
+        "name": "export",
+        "type": "Config",
+        "example": "export PATH=$PATH:/opt/bin",
+        "desc_es": "Establece variables de entorno.",
+        "desc_en": "Set an environment variable."
+    },
+    {
+        "name": "expr",
+        "type": "Core",
+        "example": "expr 5 + 3",
+        "desc_es": "Evalúa expresiones.",
+        "desc_en": "Evaluate expressions."
+    },
+    {
+        "name": "fail2ban",
+        "type": "Security",
+        "example": "fail2ban-client status",
+        "desc_es": "Demonio para prevenir ataques de fuerza bruta.",
+        "desc_en": "Ban IPs that show malicious signs."
+    },
+    {
+        "name": "fdisk",
+        "type": "System",
+        "example": "fdisk -l",
+        "desc_es": "Manipulador de tablas de particiones.",
+        "desc_en": "Manipulate disk partition table."
+    },
+    {
+        "name": "fg",
+        "type": "Core",
+        "example": "fg %1",
+        "desc_es": "Trae un trabajo a primer plano (foreground).",
+        "desc_en": "Bring a background job to the foreground."
+    },
+    {
+        "name": "file",
+        "type": "Core",
+        "example": "file image.jpg",
+        "desc_es": "Determina el tipo de archivo.",
+        "desc_en": "Determine file type."
+    },
+    {
+        "name": "find",
+        "type": "Search",
+        "example": "find / -name '*.log'",
+        "desc_es": "Busca archivos en jerarquías de directorios.",
+        "desc_en": "Search for files in a directory hierarchy."
+    },
+    {
+        "name": "free",
+        "type": "System",
+        "example": "free -m",
+        "desc_es": "Muestra cantidad de memoria libre y usada.",
+        "desc_en": "Display amount of free and used memory."
+    },
+    {
+        "name": "gcc",
+        "type": "Dev",
+        "example": "gcc main.c -o app",
+        "desc_es": "Compilador GNU C.",
+        "desc_en": "GNU project C and C++ compiler."
+    },
+    {
+        "name": "git",
+        "type": "DevOps",
+        "example": "git pull origin main",
+        "desc_es": "Sistema de control de versiones.",
+        "desc_en": "Version control system."
+    },
+    {
+        "name": "gpg",
+        "type": "Security",
+        "example": "gpg -c secret.txt",
+        "desc_es": "Herramienta de encriptación y firmas (GnuPG).",
+        "desc_en": "OpenPGP encryption and signing tool."
+    },
+    {
+        "name": "grep",
+        "type": "Text",
+        "example": "grep -i 'error' app.log",
+        "desc_es": "Busca patrones en texto. Usa Expresiones Regulares.",
+        "desc_en": "Print lines matching a pattern."
+    },
+    {
+        "name": "groupadd",
+        "type": "Security",
+        "example": "groupadd admin_group",
+        "desc_es": "Añade un nuevo grupo.",
+        "desc_en": "Create a new group."
+    },
+    {
+        "name": "groups",
+        "type": "Security",
+        "example": "groups root",
+        "desc_es": "Muestra los grupos de un usuario.",
+        "desc_en": "Print the groups a user is in."
+    },
+    {
+        "name": "gunzip",
+        "type": "Archive",
+        "example": "gunzip file.txt.gz",
+        "desc_es": "Descomprime archivos .gz.",
+        "desc_en": "Decompress files compressed by gzip."
+    },
+    {
+        "name": "gzip",
+        "type": "Archive",
+        "example": "gzip file.txt",
+        "desc_es": "Comprime archivos.",
+        "desc_en": "Compress or expand files."
+    },
+    {
+        "name": "head",
+        "type": "Text",
+        "example": "head -n 20 file.txt",
+        "desc_es": "Imprime las primeras líneas de un archivo.",
+        "desc_en": "Output the first part of files."
+    },
+    {
+        "name": "help",
+        "type": "Help",
+        "example": "help cd",
+        "desc_es": "Muestra info sobre comandos internos de bash.",
+        "desc_en": "Display built-in shell commands help."
+    },
+    {
+        "name": "history",
+        "type": "Core",
+        "example": "history | grep ssh",
+        "desc_es": "Muestra el historial de comandos.",
+        "desc_en": "Display the command history list."
+    },
+    {
+        "name": "host",
+        "type": "Network",
+        "example": "host github.com",
+        "desc_es": "Utilidad simple para resolución DNS.",
+        "desc_en": "DNS lookup utility."
+    },
+    {
+        "name": "hostname",
+        "type": "System",
+        "example": "hostname -f",
+        "desc_es": "Muestra o establece el nombre del sistema.",
+        "desc_en": "Show or set the system's host name."
+    },
+    {
+        "name": "htop",
+        "type": "System",
+        "example": "htop",
+        "desc_es": "Monitor de procesos interactivo (mejorado).",
+        "desc_en": "Interactive process viewer."
+    },
+    {
+        "name": "id",
+        "type": "System",
+        "example": "id root",
+        "desc_es": "Muestra IDs de usuario y grupo reales y efectivos.",
+        "desc_en": "Print real and effective user and group IDs."
+    },
+    {
+        "name": "ifconfig",
+        "type": "Network",
+        "example": "ifconfig eth0",
+        "desc_es": "Configura interfaces de red (obsoleto por ip).",
+        "desc_en": "Configure a network interface."
+    },
+    {
+        "name": "info",
+        "type": "Help",
+        "example": "info coreutils",
+        "desc_es": "Lee los documentos de información en línea.",
+        "desc_en": "Read Info documents."
+    },
+    {
+        "name": "iostat",
+        "type": "System",
+        "example": "iostat -dx 2",
+        "desc_es": "Estadísticas de CPU y dispositivos I/O.",
+        "desc_en": "Report CPU and I/O statistics."
+    },
+    {
+        "name": "ip",
+        "type": "Network",
+        "example": "ip a",
+        "desc_es": "Muestra / manipula enrutamiento y dispositivos de red.",
+        "desc_en": "Show/manipulate routing, networking devices, interfaces."
+    },
+    {
+        "name": "ipcs",
+        "type": "System",
+        "example": "ipcs -m",
+        "desc_es": "Provee info sobre facilidades IPC.",
+        "desc_en": "Provide information on IPC facilities."
+    },
+    {
+        "name": "iptables",
+        "type": "Security",
+        "example": "iptables -L -v",
+        "desc_es": "Herramienta de administración para IPv4 packet filtering.",
+        "desc_en": "Administration tool for IPv4 packet filtering."
+    },
+    {
+        "name": "jobs",
+        "type": "Core",
+        "example": "jobs",
+        "desc_es": "Lista los trabajos (jobs) activos.",
+        "desc_en": "List active jobs."
+    },
+    {
+        "name": "join",
+        "type": "Text",
+        "example": "join f1.txt f2.txt",
+        "desc_es": "Junta líneas de dos archivos por un campo común.",
+        "desc_en": "Join lines of two files on a common field."
+    },
+    {
+        "name": "journalctl",
+        "type": "Service",
+        "example": "journalctl -u nginx -f",
+        "desc_es": "Consulta el log de systemd.",
+        "desc_en": "Query the systemd journal."
+    },
+    {
+        "name": "jq",
+        "type": "Text",
+        "example": "cat data.json | jq '.users[]'",
+        "desc_es": "Procesador de JSON por línea de comandos.",
+        "desc_en": "Command-line JSON processor."
+    },
+    {
+        "name": "kill",
+        "type": "System",
+        "example": "kill -9 1234",
+        "desc_es": "Envía una señal a un proceso (por PID).",
+        "desc_en": "Send a signal to a process."
+    },
+    {
+        "name": "killall",
+        "type": "System",
+        "example": "killall node",
+        "desc_es": "Mata procesos por nombre.",
+        "desc_en": "Kill processes by name."
+    },
+    {
+        "name": "kubectl",
+        "type": "DevOps",
+        "example": "kubectl get pods",
+        "desc_es": "CLI de Kubernetes.",
+        "desc_en": "Command-line tool for Kubernetes."
+    },
+    {
+        "name": "last",
+        "type": "Security",
+        "example": "last -n 10",
+        "desc_es": "Muestra un listado de los últimos usuarios conectados.",
+        "desc_en": "Show listing of last logged in users."
+    },
+    {
+        "name": "ldd",
+        "type": "Dev",
+        "example": "ldd /bin/bash",
+        "desc_es": "Imprime dependencias de bibliotecas compartidas.",
+        "desc_en": "Print shared object dependencies."
+    },
+    {
+        "name": "less",
+        "type": "Text",
+        "example": "less /var/log/syslog",
+        "desc_es": "Visor de texto paginado (mejor que more).",
+        "desc_en": "View file contents one page at a time."
+    },
+    {
+        "name": "ln",
+        "type": "Core",
+        "example": "ln -s /path/to/file linkname",
+        "desc_es": "Crea enlaces (links) duros o simbólicos.",
+        "desc_en": "Make links between files."
+    },
+    {
+        "name": "locate",
+        "type": "Search",
+        "example": "locate my-file.txt",
+        "desc_es": "Encuentra archivos rápidamente mediante base de datos.",
+        "desc_en": "Find files by name."
+    },
+    {
+        "name": "logger",
+        "type": "System",
+        "example": "logger 'Prueba de log'",
+        "desc_es": "Envía mensajes al log del sistema (syslog).",
+        "desc_en": "Enter messages into the system log."
+    },
+    {
+        "name": "logout",
+        "type": "Core",
+        "example": "logout",
+        "desc_es": "Sale de un shell de login.",
+        "desc_en": "Exit a login shell."
+    },
+    {
+        "name": "ls",
+        "type": "Core",
+        "example": "ls -lah",
+        "desc_es": "Lista archivos y directorios.",
+        "desc_en": "List directory contents."
+    },
+    {
+        "name": "lsblk",
+        "type": "System",
+        "example": "lsblk",
+        "desc_es": "Lista dispositivos de bloque (discos).",
+        "desc_en": "List information about block devices."
+    },
+    {
+        "name": "lscpu",
+        "type": "System",
+        "example": "lscpu",
+        "desc_es": "Muestra información de la arquitectura de CPU.",
+        "desc_en": "Display information about the CPU architecture."
+    },
+    {
+        "name": "lsof",
+        "type": "System",
+        "example": "lsof -i :80",
+        "desc_es": "Lista archivos abiertos por procesos.",
+        "desc_en": "List open files."
+    },
+    {
+        "name": "lspci",
+        "type": "System",
+        "example": "lspci",
+        "desc_es": "Lista dispositivos PCI.",
+        "desc_en": "List all PCI devices."
+    },
+    {
+        "name": "lsusb",
+        "type": "System",
+        "example": "lsusb",
+        "desc_es": "Lista dispositivos USB.",
+        "desc_en": "List USB devices."
+    },
+    {
+        "name": "ltrace",
+        "type": "DevOps",
+        "example": "ltrace ./app",
+        "desc_es": "Rastrea llamadas a bibliotecas dinámicas.",
+        "desc_en": "A library call tracer."
+    },
+    {
+        "name": "make",
+        "type": "Dev",
+        "example": "make install",
+        "desc_es": "Mantiene grupos de programas determinando qué recompilar.",
+        "desc_en": "Utility to maintain groups of programs."
+    },
+    {
+        "name": "man",
+        "type": "Help",
+        "example": "man ls",
+        "desc_es": "Interfaz a los manuales de referencia en línea.",
+        "desc_en": "An interface to the system reference manuals."
+    },
+    {
+        "name": "md5sum",
+        "type": "Security",
+        "example": "md5sum file.iso",
+        "desc_es": "Computa y comprueba hashes MD5.",
+        "desc_en": "Compute and check MD5 message digest."
+    },
+    {
+        "name": "mkdir",
+        "type": "Core",
+        "example": "mkdir -p /tmp/test",
+        "desc_es": "Crea directorios.",
+        "desc_en": "Make directories."
+    },
+    {
+        "name": "mkfs",
+        "type": "System",
+        "example": "mkfs.ext4 /dev/sdb1",
+        "desc_es": "Construye un sistema de archivos Linux.",
+        "desc_en": "Build a Linux file system."
+    },
+    {
+        "name": "mkswap",
+        "type": "System",
+        "example": "mkswap /dev/sdc1",
+        "desc_es": "Configura área de intercambio (swap).",
+        "desc_en": "Set up a Linux swap area."
+    },
+    {
+        "name": "more",
+        "type": "Text",
+        "example": "more file.txt",
+        "desc_es": "Filtro de lectura de texto por páginas.",
+        "desc_en": "File perusal filter for CRT viewing."
+    },
+    {
+        "name": "mount",
+        "type": "System",
+        "example": "mount /dev/sda1 /mnt",
+        "desc_es": "Monta sistemas de archivos.",
+        "desc_en": "Mount a file system."
+    },
+    {
+        "name": "mtr",
+        "type": "Network",
+        "example": "mtr google.com",
+        "desc_es": "Combina ping y traceroute en vivo.",
+        "desc_en": "A network diagnostic tool."
+    },
+    {
+        "name": "mv",
+        "type": "Core",
+        "example": "mv file1 file2",
+        "desc_es": "Mueve o renombra archivos y directorios.",
+        "desc_en": "Move or rename files or directories."
+    },
+    {
+        "name": "mysql",
+        "type": "DevOps",
+        "example": "mysql -u root -p",
+        "desc_es": "Cliente de base de datos MySQL.",
+        "desc_en": "MySQL command-line client."
+    },
+    {
+        "name": "nano",
+        "type": "Editor",
+        "example": "nano script.sh",
+        "desc_es": "Editor de texto simple en terminal.",
+        "desc_en": "Nano's ANOther editor."
+    },
+    {
+        "name": "nc",
+        "type": "Network",
+        "example": "nc -zv 10.0.0.1 80",
+        "desc_es": "Netcat: lee y escribe datos por conexiones de red.",
+        "desc_en": "Arbitrary TCP and UDP connections."
+    },
+    {
+        "name": "netstat",
+        "type": "Network",
+        "example": "netstat -tuln",
+        "desc_es": "Imprime conexiones de red, tablas de enrutamiento.",
+        "desc_en": "Print network connections, routing tables, stats."
+    },
+    {
+        "name": "nm",
+        "type": "Dev",
+        "example": "nm file.o",
+        "desc_es": "Lista símbolos de archivos objeto.",
+        "desc_en": "List symbols from object files."
+    },
+    {
+        "name": "nmap",
+        "type": "Security",
+        "example": "nmap -sV 192.168.1.1",
+        "desc_es": "Explorador de redes e introspección de puertos.",
+        "desc_en": "Network exploration tool and security scanner."
+    },
+    {
+        "name": "node",
+        "type": "Dev",
+        "example": "node app.js",
+        "desc_es": "Entorno de ejecución de JavaScript.",
+        "desc_en": "Server-side JavaScript runtime."
+    },
+    {
+        "name": "nohup",
+        "type": "System",
+        "example": "nohup ./script.sh &",
+        "desc_es": "Ejecuta un comando inmune a hangups.",
+        "desc_en": "Run a command immune to hangups."
+    },
+    {
+        "name": "npm",
+        "type": "Dev",
+        "example": "npm install",
+        "desc_es": "Gestor de paquetes de Node.",
+        "desc_en": "Node package manager."
+    },
+    {
+        "name": "nslookup",
+        "type": "Network",
+        "example": "nslookup amazon.com",
+        "desc_es": "Consulta servidores DNS.",
+        "desc_en": "Query Internet name servers interactively."
+    },
+    {
+        "name": "objdump",
+        "type": "Dev",
+        "example": "objdump -d file.o",
+        "desc_es": "Muestra info de archivos objeto (desensambla).",
+        "desc_en": "Display information from object files."
+    },
+    {
+        "name": "openssl",
+        "type": "Security",
+        "example": "openssl genrsa -out key.pem 2048",
+        "desc_es": "Herramienta de criptografía y certificados.",
+        "desc_en": "OpenSSL command line tool."
+    },
+    {
+        "name": "pacman",
+        "type": "System",
+        "example": "pacman -Syu",
+        "desc_es": "Gestor de paquetes de Arch Linux.",
+        "desc_en": "Arch Linux package manager."
+    },
+    {
+        "name": "parted",
+        "type": "System",
+        "example": "parted /dev/sda print",
+        "desc_es": "Programa de particionamiento de discos.",
+        "desc_en": "A partition manipulation program."
+    },
+    {
+        "name": "passwd",
+        "type": "Security",
+        "example": "passwd admin",
+        "desc_es": "Cambia contraseñas de usuario.",
+        "desc_en": "Change user password."
+    },
+    {
+        "name": "paste",
+        "type": "Text",
+        "example": "paste col1.txt col2.txt",
+        "desc_es": "Junta líneas de archivos horizontalmente.",
+        "desc_en": "Merge lines of files."
+    },
+    {
+        "name": "pgrep",
+        "type": "System",
+        "example": "pgrep nginx",
+        "desc_es": "Busca procesos basándose en su nombre.",
+        "desc_en": "Look up processes based on name."
+    },
+    {
+        "name": "ping",
+        "type": "Network",
+        "example": "ping 8.8.8.8",
+        "desc_es": "Envía paquetes ICMP a un host de red.",
+        "desc_en": "Send ICMP ECHO_REQUEST to network hosts."
+    },
+    {
+        "name": "pkill",
+        "type": "System",
+        "example": "pkill -f python",
+        "desc_es": "Mata procesos basados en nombre y otros atributos.",
+        "desc_en": "Signal processes based on name."
+    },
+    {
+        "name": "printf",
+        "type": "Core",
+        "example": "printf 'Hola %s' $USER",
+        "desc_es": "Formatea e imprime datos.",
+        "desc_en": "Format and print data."
+    },
+    {
+        "name": "ps",
+        "type": "System",
+        "example": "ps aux | grep nginx",
+        "desc_es": "Muestra instantánea de procesos actuales.",
+        "desc_en": "Report a snapshot of current processes."
+    },
+    {
+        "name": "pstree",
+        "type": "System",
+        "example": "pstree -p",
+        "desc_es": "Muestra los procesos en forma de árbol.",
+        "desc_en": "Display a tree of processes."
+    },
+    {
+        "name": "pwd",
+        "type": "Core",
+        "example": "pwd",
+        "desc_es": "Muestra la ruta actual completa.",
+        "desc_en": "Print name of current/working directory."
+    },
+    {
+        "name": "python",
+        "type": "Dev",
+        "example": "python -m http.server 8000",
+        "desc_es": "Intérprete de Python.",
+        "desc_en": "Interactive Python shell."
+    },
+    {
+        "name": "read",
+        "type": "Core",
+        "example": "read varname",
+        "desc_es": "Lee de stdin a una variable.",
+        "desc_en": "Read a line from standard input."
+    },
+    {
+        "name": "readlink",
+        "type": "System",
+        "example": "readlink -f symlink",
+        "desc_es": "Muestra el destino de un symlink.",
+        "desc_en": "Print resolved symbolic links."
+    },
+    {
+        "name": "realpath",
+        "type": "Core",
+        "example": "realpath file.txt",
+        "desc_es": "Devuelve la ruta absoluta.",
+        "desc_en": "Print the resolved path."
+    },
+    {
+        "name": "reset",
+        "type": "System",
+        "example": "reset",
+        "desc_es": "Reinicia el estado de la terminal (útil si se corrompe).",
+        "desc_en": "Terminal initialization."
+    },
+    {
+        "name": "rm",
+        "type": "Core",
+        "example": "rm -rf folder/",
+        "desc_es": "Elimina archivos o directorios.",
+        "desc_en": "Remove files or directories."
+    },
+    {
+        "name": "route",
+        "type": "Network",
+        "example": "route -n",
+        "desc_es": "Muestra o altera la tabla de rutas IP.",
+        "desc_en": "Show/manipulate the IP routing table."
+    },
+    {
+        "name": "rsync",
+        "type": "Network",
+        "example": "rsync -avz local/ host:/remote/",
+        "desc_es": "Sincronizador rápido de archivos (local y remoto).",
+        "desc_en": "Fast, versatile, remote (and local) file-copying tool."
+    },
+    {
+        "name": "sar",
+        "type": "System",
+        "example": "sar -u 1 3",
+        "desc_es": "Recolecta, reporta o guarda info de actividad del sistema.",
+        "desc_en": "Collect, report, or save system activity info."
+    },
+    {
+        "name": "scp",
+        "type": "Network",
+        "example": "scp backup.tar user@host:/tmp/",
+        "desc_es": "Copia segura (remota) de archivos.",
+        "desc_en": "Secure copy (remote file copy program)."
+    },
+    {
+        "name": "screen",
+        "type": "System",
+        "example": "screen -S dev",
+        "desc_es": "Gestor de ventanas con terminal virtual multiplexado.",
+        "desc_en": "Screen manager with VT100/ANSI terminal emulation."
+    },
+    {
+        "name": "sed",
+        "type": "Text",
+        "example": "sed -i 's/foo/bar/g' file.txt",
+        "desc_es": "Editor de flujo para filtrar y transformar texto.",
+        "desc_en": "Stream editor for filtering and transforming text."
+    },
+    {
+        "name": "seq",
+        "type": "Core",
+        "example": "seq 1 10",
+        "desc_es": "Imprime secuencias numéricas.",
+        "desc_en": "Print a sequence of numbers."
+    },
+    {
+        "name": "service",
+        "type": "Service",
+        "example": "service apache2 start",
+        "desc_es": "Ejecuta scripts init System V.",
+        "desc_en": "Run a System V init script."
+    },
+    {
+        "name": "sftp",
+        "type": "Network",
+        "example": "sftp user@host",
+        "desc_es": "Programa de transferencia de archivos seguro.",
+        "desc_en": "Secure file transfer program."
+    },
+    {
+        "name": "sha256sum",
+        "type": "Security",
+        "example": "sha256sum file.iso",
+        "desc_es": "Computa hashes SHA-256.",
+        "desc_en": "Compute and check SHA256 message digest."
+    },
+    {
+        "name": "sleep",
+        "type": "Core",
+        "example": "sleep 5",
+        "desc_es": "Retrasa la ejecución por el tiempo especificado.",
+        "desc_en": "Delay for a specified amount of time."
+    },
+    {
+        "name": "sort",
+        "type": "Text",
+        "example": "sort -nr logs.txt",
+        "desc_es": "Ordena líneas de texto.",
+        "desc_en": "Sort lines of text files."
+    },
+    {
+        "name": "source",
+        "type": "Config",
+        "example": "source ~/.bashrc",
+        "desc_es": "Ejecuta comandos de un archivo en el shell actual.",
+        "desc_en": "Evaluate commands from a file in the current shell."
+    },
+    {
+        "name": "source / .",
+        "type": "Config",
+        "example": ". ~/.profile",
+        "desc_es": "Igual que source (punto).",
+        "desc_en": "Igual que source (punto)."
+    },
+    {
+        "name": "split",
+        "type": "Text",
+        "example": "split -b 10M bigfile.tar",
+        "desc_es": "Divide un archivo en pedazos.",
+        "desc_en": "Split a file into pieces."
+    },
+    {
+        "name": "ss",
+        "type": "Network",
+        "example": "ss -tulpn",
+        "desc_es": "Investiga sockets (moderno netstat).",
+        "desc_en": "Utility to investigate sockets."
+    },
+    {
+        "name": "ssh",
+        "type": "Network",
+        "example": "ssh root@10.0.0.1",
+        "desc_es": "Cliente OpenSSH (conexión remota).",
+        "desc_en": "OpenSSH SSH client."
+    },
+    {
+        "name": "stat",
+        "type": "Core",
+        "example": "stat index.html",
+        "desc_es": "Muestra estado de archivo o sistema de archivos.",
+        "desc_en": "Display file or file system status."
+    },
+    {
+        "name": "strace",
+        "type": "DevOps",
+        "example": "strace -p 1234",
+        "desc_es": "Rastrea llamadas al sistema y señales.",
+        "desc_en": "Trace system calls and signals."
+    },
+    {
+        "name": "strings",
+        "type": "Dev",
+        "example": "strings binary_file",
+        "desc_es": "Imprime secuencias de caracteres imprimibles.",
+        "desc_en": "Print the sequences of printable characters in files."
+    },
+    {
+        "name": "su",
+        "type": "Security",
+        "example": "su - postgres",
+        "desc_es": "Cambia de usuario temporalmente.",
+        "desc_en": "Run a command with substitute user and group ID."
+    },
+    {
+        "name": "sudo",
+        "type": "Security",
+        "example": "sudo apt update",
+        "desc_es": "Ejecuta un comando como superusuario.",
+        "desc_en": "Execute a command as another user."
+    },
+    {
+        "name": "swapoff",
+        "type": "System",
+        "example": "swapoff -a",
+        "desc_es": "Deshabilita dispositivos de intercambio.",
+        "desc_en": "Disable devices and files for paging and swapping."
+    },
+    {
+        "name": "swapon",
+        "type": "System",
+        "example": "swapon /dev/sdc1",
+        "desc_es": "Habilita dispositivos de intercambio.",
+        "desc_en": "Enable devices and files for paging and swapping."
+    },
+    {
+        "name": "sync",
+        "type": "System",
+        "example": "sync",
+        "desc_es": "Sincroniza caché de memoria a disco.",
+        "desc_en": "Synchronize cached writes to persistent storage."
+    },
+    {
+        "name": "systemctl",
+        "type": "Service",
+        "example": "systemctl restart nginx",
+        "desc_es": "Controla el sistema systemd y el gestor de servicios.",
+        "desc_en": "Control the systemd system and service manager."
+    },
+    {
+        "name": "tac",
+        "type": "Text",
+        "example": "tac log.txt",
+        "desc_es": "Muestra archivos invirtiendo las líneas (cat al revés).",
+        "desc_en": "Concatenate and print files in reverse."
+    },
+    {
+        "name": "tail",
+        "type": "Text",
+        "example": "tail -f /var/log/auth.log",
+        "desc_es": "Imprime las últimas líneas. `-f` sigue los cambios.",
+        "desc_en": "Output the last part of files."
+    },
+    {
+        "name": "tar",
+        "type": "Archive",
+        "example": "tar -czvf backup.tar.gz /var/www",
+        "desc_es": "Utilidad para manipular archivos tar (empaquetado).",
+        "desc_en": "An archiving utility."
+    },
+    {
+        "name": "tcpd",
+        "type": "Security",
+        "example": "man tcpd",
+        "desc_es": "Centro de control de acceso TCP.",
+        "desc_en": "Access control facility for internet services."
+    },
+    {
+        "name": "tcpdump",
+        "type": "Security",
+        "example": "tcpdump -i eth0 port 80",
+        "desc_es": "Vuelca tráfico de red.",
+        "desc_en": "Dump traffic on a network."
+    },
+    {
+        "name": "tee",
+        "type": "Text",
+        "example": "ls -l | tee output.txt",
+        "desc_es": "Lee de stdin y escribe a stdout y archivos.",
+        "desc_en": "Read from standard input and write to standard output and files."
+    },
+    {
+        "name": "tmux",
+        "type": "System",
+        "example": "tmux new -s dev",
+        "desc_es": "Multiplexor de terminal (moderno).",
+        "desc_en": "Terminal multiplexer."
+    },
+    {
+        "name": "top",
+        "type": "System",
+        "example": "top",
+        "desc_es": "Monitor de procesos y recursos en tiempo real.",
+        "desc_en": "Display Linux processes."
+    },
+    {
+        "name": "touch",
+        "type": "Core",
+        "example": "touch file.txt",
+        "desc_es": "Crea un archivo vacío o actualiza su timestamp.",
+        "desc_en": "Change file timestamps."
+    },
+    {
+        "name": "tr",
+        "type": "Text",
+        "example": "echo 'HOLA' | tr 'A-Z' 'a-z'",
+        "desc_es": "Traduce o elimina caracteres.",
+        "desc_en": "Translate or delete characters."
+    },
+    {
+        "name": "traceroute",
+        "type": "Network",
+        "example": "traceroute google.com",
+        "desc_es": "Imprime la ruta hacia el host.",
+        "desc_en": "Print the route packets trace to network host."
+    },
+    {
+        "name": "tree",
+        "type": "Core",
+        "example": "tree -L 2",
+        "desc_es": "Lista el contenido de un directorio en forma de árbol.",
+        "desc_en": "List contents of directories in a tree-like format."
+    },
+    {
+        "name": "ufw",
+        "type": "Security",
+        "example": "ufw allow 22/tcp",
+        "desc_es": "Uncomplicated Firewall, gestión simple de iptables.",
+        "desc_en": "Program for managing a netfilter firewall."
+    },
+    {
+        "name": "umount",
+        "type": "System",
+        "example": "umount /mnt",
+        "desc_es": "Desmonta sistemas de archivos.",
+        "desc_en": "Unmount file systems."
+    },
+    {
+        "name": "unalias",
+        "type": "Config",
+        "example": "unalias ll",
+        "desc_es": "Elimina un alias definido.",
+        "desc_en": "Remove alias definitions."
+    },
+    {
+        "name": "uname",
+        "type": "System",
+        "example": "uname -a",
+        "desc_es": "Imprime información del sistema.",
+        "desc_en": "Print system information."
+    },
+    {
+        "name": "uniq",
+        "type": "Text",
+        "example": "sort list.txt | uniq -c",
+        "desc_es": "Omite o reporta líneas repetidas.",
+        "desc_en": "Report or omit repeated lines."
+    },
+    {
+        "name": "unzip",
+        "type": "Archive",
+        "example": "unzip archive.zip",
+        "desc_es": "Extrae archivos comprimidos en ZIP.",
+        "desc_en": "List, test and extract compressed files in a ZIP archive."
+    },
+    {
+        "name": "updatedb",
+        "type": "Search",
+        "example": "sudo updatedb",
+        "desc_es": "Actualiza la base de datos de locate.",
+        "desc_en": "Update a database for mlocate."
+    },
+    {
+        "name": "uptime",
+        "type": "System",
+        "example": "uptime",
+        "desc_es": "Muestra cuánto tiempo lleva el sistema encendido.",
+        "desc_en": "Tell how long the system has been running."
+    },
+    {
+        "name": "useradd",
+        "type": "Security",
+        "example": "useradd -m newuser",
+        "desc_es": "Añade un nuevo usuario al sistema.",
+        "desc_en": "Create a new user or update default new user information."
+    },
+    {
+        "name": "userdel",
+        "type": "Security",
+        "example": "userdel -r olduser",
+        "desc_es": "Elimina una cuenta de usuario.",
+        "desc_en": "Delete a user account and related files."
+    },
+    {
+        "name": "usermod",
+        "type": "Security",
+        "example": "usermod -aG docker user",
+        "desc_es": "Modifica una cuenta de usuario.",
+        "desc_en": "Modify a user account."
+    },
+    {
+        "name": "vi",
+        "type": "Editor",
+        "example": "vi /etc/hosts",
+        "desc_es": "Editor de texto clásico.",
+        "desc_en": "Programmer's text editor."
+    },
+    {
+        "name": "vim",
+        "type": "Editor",
+        "example": "vim config.yml",
+        "desc_es": "Editor de texto avanzado.",
+        "desc_en": "Vi IMproved, a programmer's text editor."
+    },
+    {
+        "name": "visudo",
+        "type": "Security",
+        "example": "sudo visudo",
+        "desc_es": "Edita el archivo sudoers de forma segura.",
+        "desc_en": "Edit the sudoers file securely."
+    },
+    {
+        "name": "vmstat",
+        "type": "System",
+        "example": "vmstat 1 5",
+        "desc_es": "Reporta estadísticas de memoria virtual.",
+        "desc_en": "Report virtual memory statistics."
+    },
+    {
+        "name": "w",
+        "type": "Security",
+        "example": "w",
+        "desc_es": "Muestra quién está conectado y qué hace.",
+        "desc_en": "Show who is logged on and what they are doing."
+    },
+    {
+        "name": "wall",
+        "type": "Core",
+        "example": "wall 'Servidor se reinicia'",
+        "desc_es": "Envía un mensaje al terminal de todos los usuarios.",
+        "desc_en": "Write a message to all users."
+    },
+    {
+        "name": "watch",
+        "type": "System",
+        "example": "watch -n 1 free -m",
+        "desc_es": "Ejecuta un programa periódicamente mostrando su salida.",
+        "desc_en": "Execute a program periodically, showing output fullscreen."
+    },
+    {
+        "name": "wc",
+        "type": "Text",
+        "example": "wc -l list.txt",
+        "desc_es": "Cuenta líneas, palabras o bytes.",
+        "desc_en": "Print newline, word, and byte counts for each file."
+    },
+    {
+        "name": "wget",
+        "type": "Network",
+        "example": "wget http://example.com/file.zip",
+        "desc_es": "Descarga archivos desde la red.",
+        "desc_en": "The non-interactive network downloader."
+    },
+    {
+        "name": "whereis",
+        "type": "Search",
+        "example": "whereis php",
+        "desc_es": "Localiza el binario, código y manual de un comando.",
+        "desc_en": "Locate the binary, source, and manual page files for a command."
+    },
+    {
+        "name": "which",
+        "type": "Search",
+        "example": "which node",
+        "desc_es": "Muestra la ruta completa del comando ejecutable.",
+        "desc_en": "Locate a command."
+    },
+    {
+        "name": "whoami",
+        "type": "System",
+        "example": "whoami",
+        "desc_es": "Muestra tu usuario actual.",
+        "desc_en": "Print effective userid."
+    },
+    {
+        "name": "whois",
+        "type": "Network",
+        "example": "whois google.com",
+        "desc_es": "Busca datos de registro de un dominio.",
+        "desc_en": "Client for the whois directory service."
+    },
+    {
+        "name": "xargs",
+        "type": "Text",
+        "example": "find . -name '*.bak' | xargs rm",
+        "desc_es": "Construye y ejecuta comandos desde stdin.",
+        "desc_en": "Build and execute command lines from standard input."
+    },
+    {
+        "name": "xz",
+        "type": "Archive",
+        "example": "xz file.tar",
+        "desc_es": "Compresor con alto ratio de compresión.",
+        "desc_en": "Compress or decompress .xz and .lzma files."
+    },
+    {
+        "name": "yes",
+        "type": "Core",
+        "example": "yes 'hola'",
+        "desc_es": "Imprime 'y' (o un string) repetidamente.",
+        "desc_en": "Output a string repeatedly until killed."
+    },
+    {
+        "name": "yum",
+        "type": "System",
+        "example": "yum install httpd",
+        "desc_es": "Gestor de paquetes (RHEL/CentOS).",
+        "desc_en": "Package manager (RHEL/CentOS)."
+    },
+    {
+        "name": "zip",
+        "type": "Archive",
+        "example": "zip -r backup.zip /var/www",
+        "desc_es": "Empaqueta y comprime (formato ZIP).",
+        "desc_en": "Package and compress (archive) files."
+    },
+    {
+        "name": "tcpdump",
+        "type": "Network",
+        "example": "tcpdump -i eth0",
+        "desc_es": "Analizador de tráfico de red en línea de comandos.",
+        "desc_en": "Dump traffic on a network."
+    },
+    {
+        "name": "shred",
+        "type": "Security",
+        "example": "shred -u file.txt",
+        "desc_es": "Sobrescribe un archivo para ocultar su contenido, opcionalmente lo borra.",
+        "desc_en": "Overwrite a file to hide its contents."
+    },
+    {
+        "name": "./exploit",
+        "type": "Security",
+        "example": "./exploit",
+        "desc_es": "Ejecutable local compilado.",
+        "desc_en": "Execute an exploit script."
+    },
+    {
+        "name": "hydra",
+        "type": "Security",
+        "example": "hydra -l admin -P rockyou.txt ssh://192.168.1.10",
+        "desc_es": "Herramienta rápida para ataques de fuerza bruta por diccionario.",
+        "desc_en": "Network logon cracker."
+    },
+    {
+        "name": "proxychains",
+        "type": "Network",
+        "example": "proxychains curl http://hidden.onion",
+        "desc_es": "Fuerza a las aplicaciones de red a pasar por servidores proxy.",
+        "desc_en": "Redirect connections through proxy servers."
+    },
+    {
+        "name": "certbot",
+        "type": "Security",
+        "example": "certbot --nginx -d hacker.com",
+        "desc_es": "Cliente Let's Encrypt para generar certificados SSL/TLS automáticamente.",
+        "desc_en": "Let's Encrypt client to get SSL/TLS certificates."
+    },
+    {
+        "name": "socat",
+        "type": "Network",
+        "example": "socat TCP4-LISTEN:443,reuseaddr,fork TCP4:192.168.1.10:80",
+        "desc_es": "Relé de datos bidireccional multipropósito. Evolución de Netcat.",
+        "desc_en": "Multipurpose relay (SOcket CAT)."
+    },
+    {
+        "name": "john",
+        "type": "Security",
+        "example": "john --wordlist=rockyou.txt hashes.txt",
+        "desc_es": "John the Ripper. Herramienta avanzada para crackear contraseñas.",
+        "desc_en": "John the Ripper password cracker."
+    },
+    {
+        "name": "hashcat",
+        "type": "Security",
+        "example": "hashcat -m 0 -a 0 hash.txt dict.txt",
+        "desc_es": "El recuperador de contraseñas más rápido del mundo (usa GPU).",
+        "desc_en": "Advanced password recovery utility."
+    },
+    {
+        "name": "sqlmap",
+        "type": "Security",
+        "example": "sqlmap -u \"http://target.com/page.php?id=1\" --dbs",
+        "desc_es": "Automatiza la detección y explotación de inyecciones SQL.",
+        "desc_en": "Automatic SQL injection and database takeover tool."
+    },
+    {
+        "name": "gobuster",
+        "type": "Security",
+        "example": "gobuster dir -u http://target.com -w common.txt",
+        "desc_es": "Herramienta para fuerza bruta de URIs y subdominios escrita en Go.",
+        "desc_en": "Directory/file & DNS busting tool."
+    },
+    {
+        "name": "tmux",
+        "type": "System",
+        "example": "tmux new -s hacking_session",
+        "desc_es": "Multiplexor de terminal (como screen, pero más moderno).",
+        "desc_en": "Terminal multiplexer."
+    },
+    {
+        "name": "systemctl",
+        "type": "System",
+        "example": "systemctl restart nginx",
+        "desc_es": "Controla el sistema systemd y el gestor de servicios.",
+        "desc_en": "Control the systemd system and service manager."
+    },
+    {
+        "name": "strace",
+        "type": "DevOps",
+        "example": "strace -p 1234",
+        "desc_es": "Rastrea llamadas al sistema (system calls) de un proceso.",
+        "desc_en": "Trace system calls and signals."
+    },
+    {
+        "name": "tshark",
+        "type": "Network",
+        "example": "tshark -i eth0 -w capture.pcap",
+        "desc_es": "Analizador de protocolos de red en modo texto (Wireshark CLI).",
+        "desc_en": "Dump and analyze network traffic (Wireshark)."
+    },
+    {
+        "name": "ffuf",
+        "type": "Security",
+        "example": "ffuf -w wordlist.txt -u http://target/FUZZ",
+        "desc_es": "Fuzzing web rápido en Go.",
+        "desc_en": "Fast web fuzzer written in Go."
+    },
+    {
+        "name": "nikto",
+        "type": "Security",
+        "example": "nikto -h http://target.com",
+        "desc_es": "Escáner de servidores web exhaustivo para buscar vulnerabilidades.",
+        "desc_en": "Web server scanner."
+    },
+    {
+        "name": "chattr",
+        "type": "Security",
+        "example": "chattr +i backdoor.php",
+        "desc_es": "Cambia los atributos de los archivos (ej. hacerlos inmutables).",
+        "desc_en": "Change file attributes on a Linux file system."
+    },
+    {
+        "name": "lsattr",
+        "type": "System",
+        "example": "lsattr backdoor.php",
+        "desc_es": "Muestra los atributos de los archivos en un sistema ext2/ext3/ext4.",
+        "desc_en": "List file attributes on a Linux second extended file system."
+    },
+    {
+        "name": "dirb",
+        "type": "Security",
+        "example": "dirb http://target.com/ wordlist.txt",
+        "desc_es": "Escáner de directorios web.",
+        "desc_en": "Web content scanner."
+    },
+    {
+        "name": "msfconsole",
+        "type": "Security",
+        "example": "msfconsole -q",
+        "desc_es": "Consola principal del framework Metasploit para explotar vulnerabilidades.",
+        "desc_en": "Metasploit Framework console."
+    }
+]

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Mastery Lab | Be the Root</title>
+    <meta name="description" content="Domina la terminal Linux/Unix con nuestro simulador interactivo y misiones de nivel profesional.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://terminal.alejandrobriz.es/">
+    <meta property="og:title" content="Terminal Mastery Lab | Be the Root">
+    <meta property="og:description" content="Domina la terminal Linux/Unix con nuestro simulador interactivo y misiones de nivel profesional.">
+    <meta property="og:image" content="https://terminal.alejandrobriz.es/logo.webp">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://terminal.alejandrobriz.es/">
+    <meta name="twitter:title" content="Terminal Mastery Lab | Be the Root">
+    <meta name="twitter:description" content="Domina la terminal Linux/Unix con nuestro simulador interactivo y misiones de nivel profesional.">
+    <meta name="twitter:image" content="https://terminal.alejandrobriz.es/logo.webp">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Terminal Mastery Lab",
+      "url": "https://terminal.alejandrobriz.es/",
+      "description": "Simulador interactivo para dominar la terminal Linux/Unix con misiones y retos.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "image": "https://terminal.alejandrobriz.es/logo.webp",
+      "creator": {
+        "@type": "Person",
+        "name": "Alejandro Briz",
+        "url": "https://alejandrobriz.es"
+      }
+    }
+    </script>
+
+    <!-- PWA and Favicon -->
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b132b">
+    <link rel="apple-touch-icon" href="icon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXLJZLV94C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MXLJZLV94C');
+    </script>
+</head>
+<body class="boot-sequence">
+    <canvas id="matrix-canvas"></canvas>
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="terminal-text" id="loader-text" data-i18n="ui_loading">Initializing system...</div>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Retro Boss Briefing Modal -->
+    <div id="boss-modal" class="modal-overlay hidden" style="z-index: 10000; backdrop-filter: blur(5px);">
+        <div class="boss-dialog">
+            <div class="boss-header" data-i18n="ui_boss_header">INCOMING TRANSMISSION...</div>
+            <div class="boss-content">
+                <img src="boss.png" alt="El Jefe" class="boss-avatar">
+                <div class="boss-text-area">
+                    <p class="boss-name" data-i18n="ui_boss_name">HEAD OF IT_</p>
+                    <p id="boss-message" class="typewriter-text"></p>
+                    <button id="btn-accept-mission" class="btn-blink hidden" data-i18n="ui_boss_btn">[ ENTER ] ACEPTAR MISIÓN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="icon">_></span>
+            <h1>TERMINAL<span>MASTERY</span></h1>
+        </div>
+        <nav style="display: flex; gap: 1rem; align-items: center;">
+            <button id="toggle-lang" class="tab-btn" style="padding: 4px 8px; font-size: 0.8rem; border-color: var(--accent-secondary); color: var(--accent-secondary);">EN</button>
+            <button id="toggle-crt" class="tab-btn" style="padding: 4px 8px; font-size: 0.8rem;" data-i18n="ui_crt_mode">CRT Mode</button>
+
+            <div class="user-stats">
+                <span class="stat-item"><span data-i18n="ui_rank">Rank:</span> <span class="value" id="user-rank">Novice</span></span>
+                <span class="stat-item"><span data-i18n="ui_level">Level:</span> <span class="value" id="user-level">1</span></span>
+                <div class="xp-container" title="Experience Points">
+                    <span class="xp-text" id="user-xp">0 / 100 XP</span>
+                    <div class="xp-bar"><div class="xp-fill" id="xp-fill"></div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+
+        <aside class="sidebar">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="missions" data-i18n="ui_tab_missions">Missions</button>
+                <button class="tab-btn" data-tab="dictionary" data-i18n="ui_tab_dictionary">Dictionary</button>
+                <button class="tab-btn" data-tab="guides" data-i18n="ui_tab_guides">Guides</button>
+            </div>
+
+            <div class="badges-container" id="badges-container">
+                <!-- Badges will be injected here -->
+            </div>
+
+            <div id="missions-tab" class="tab-content active">
+                <div id="mobile-alert" class="mobile-alert" style="margin-top: 0;">
+                    <div class="alert-content">
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;" data-i18n="ui_mobile_alert_title">⚠️ Alerta del Sistema</span>
+                        <div data-i18n="ui_mobile_alert_body">
+                            Para disfrutar de la experiencia completa de hackeo y usar las misiones interactivas, abre esta web en un <strong>ordenador con teclado físico</strong>.<br><br>
+                            <em>Modo lectura activado: Puedes consultar el diccionario y las guías.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-control">
+                    <h2>Current Mission</h2>
+                    <div id="mission-info" class="mission-card">
+                        <h3 id="mission-title">The First Login</h3>
+                        <p id="mission-desc">Aprende a navegar por el sistema de archivos. Tu primera tarea es descubrir dónde estás.</p>
+                        <div class="objectives">
+                            <h4>Objectives:</h4>
+                            <ul id="objective-list">
+                                <li class="pending">Usa <code>pwd</code> para ver tu ruta actual.</li>
+                                <li class="pending">Lista los archivos con <code>ls</code>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dictionary-tab" class="tab-content">
+                <div class="dictionary-header">
+                    <h2>Command Dictionary</h2>
+                    <input type="text" id="dict-search" placeholder="Search command...">
+                </div>
+                <div class="dict-list" id="dict-list">
+                    <!-- Commands will be injected here -->
+                </div>
+            </div>
+
+            <div id="guides-tab" class="tab-content">
+                <div class="guides-container">
+                    <h2>Survival Guide</h2>
+                    <div class="guide-item">
+                        <h3>¿Qué es la Terminal?</h3>
+                        <p>Es una interfaz de texto para hablar directamente con el ordenador sin usar el ratón.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>El Prompt</h3>
+                        <p>El texto <code>user@mast-lab:~$</code> indica que el sistema está listo para recibir órdenes. El símbolo <code>~</code> representa tu directorio personal.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Sintaxis Básica</h3>
+                        <p><code>comando [argumentos]</code><br>Ejemplo: <code>cd /var/log</code></p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Rutas: Absolutas vs Relativas</h3>
+                        <p>Las rutas absolutas empiezan desde la raíz (ej: <code>/var/log</code>). Las relativas desde donde estás (ej: <code>..</code> para subir de carpeta o <code>archivo.txt</code>).</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Caza de Procesos</h3>
+                        <p>Usa <code>ps aux</code> para listar todos los procesos en ejecución. Localiza el PID (número identificador) y destrúyelo con <code>kill -9 PID</code>.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Permisos de Ejecución</h3>
+                        <p>Los scripts suelen necesitar permisos especiales para ejecutarse. Usa <code>chmod +x script.sh</code> para volverlo ejecutable, y lánzalo con <code>./script.sh</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="terminal-container">
+            <div class="terminal-header">
+                <div class="controls">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-title">bash — user@mast-lab: ~</div>
+                <div class="system-time" id="clock">17:25:02</div>
+            </div>
+            <div class="terminal-body" id="terminal">
+                <div class="input-line" style="display: none;" id="input-container">
+                    <span class="prompt" id="current-prompt">user@mast-lab:~$</span>
+                    <input type="text" id="cli-input" autocomplete="off" spellcheck="false">
+                </div>
+
+                <!-- Nano Editor Overlay -->
+                <div id="nano" class="nano-editor">
+                    <div class="nano-header">
+                        <span>GNU nano 5.4</span>
+                        <span id="nano-filename">new_file</span>
+                        <span>Modified</span>
+                    </div>
+                    <textarea id="nano-textarea" class="nano-content"></textarea>
+                    <div class="nano-footer">
+                        <div><span>^G</span> Get Help</div>
+                        <div><span>^O</span> Write Out</div>
+                        <div><span>^W</span> Where Is</div>
+                        <div><span>^X</span> Exit</div>
+                        <div><span>^R</span> Read File</div>
+                        <div><span>^K</span> Cut Text</div>
+                        <div><span>^J</span> Justify</div>
+                        <div><span>^C</span> Cur Pos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>
+            Built by <a href="https://alejandrobriz.es" target="_blank" style="color: var(--accent-secondary); text-decoration: none; font-weight: 600;">Alejandro Briz</a>
+            &nbsp;•&nbsp;
+            <a href="https://buymeacoffee.com/comeranas" target="_blank" style="color: var(--text-dim); text-decoration: none;">Buy Me a Coffee</a>
+            &nbsp;•&nbsp;
+            <a href="https://github.com/sponsors" target="_blank" style="color: var(--text-dim); text-decoration: none;">GitHub Sponsors</a>
+        </p>
+    </footer>
+
+    <script src="audio.js"></script>
+    <script src="pro-commands.js"></script>
+    <script src="levels/apprentice-missions.js"></script>
+    <script src="levels/pro-missions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
