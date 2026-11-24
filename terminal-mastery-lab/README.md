@@ -72,7 +72,6 @@ Open `index.html` in any browser or launch a static server. You are ready!
 If this simulator helped you learn Linux or you need professional assistance:
 - 💼 **Web & Cloud Consulting**: [alejandrobriz.es](https://alejandrobriz.es)
 - ☕ **Buy Me a Coffee**: [buymeacoffee.com/comeranas](https://buymeacoffee.com/comeranas)
-- 💖 **GitHub Sponsors**: [github.com/sponsors](https://github.com/sponsors)
 
 ---
 
@@ -140,4 +139,3 @@ m_custom_1_o1: "Run `uptime` to inspect system load.",
 Si este simulador te ha sido útil o necesitas consultoría para tu empresa:
 - 💼 **Consultoría Web & DevOps**: [alejandrobriz.es](https://alejandrobriz.es)
 - ☕ **Invitar a un café**: [buymeacoffee.com/comeranas](https://buymeacoffee.com/comeranas)
-- 💖 **Patrocinar en GitHub**: [github.com/sponsors](https://github.com/sponsors)
