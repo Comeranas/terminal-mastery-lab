@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Permitted to train models with public data from this site.
